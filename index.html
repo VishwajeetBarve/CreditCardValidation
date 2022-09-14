@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+<!-- StyleSheet -->
+  <link rel="stylesheet" href="index.css">
+<!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Inter:wght@400;600;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Montserrat&family=Open+Sans&family=Oswald&family=Overpass:wght@400;600;700&family=Poppins:wght@400;500;600;700&family=Raleway&family=Roboto&family=Roboto+Condensed&family=Seaweed+Script&family=Space+Grotesk:wght@400;500;700&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+  <div class="coding-info">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by Vishwajeet Barve.
+  </div>
+  <!-- <h1>Coded By Vishwajeet Barve</h1> -->
+  <div class="cards">
+    <!-- front of the card -->
+  <div class="card-front">
+    <div class="front-info">
+      
+    <div class="number">
+      <!-- 00000000000000 -->
+      <span class="first">0000</span>
+      <span class="second">0000</span>
+      <span class="third">0000</span>
+      <span class="fourth">0000</span>
+    </div>
+    <div class="userdetails">
+      <span class="username">Jane Appleseed</span>
+      <div>
+      <span class="expirymonth">00</span>
+      <span>/</span>
+      <span class="expiryyear">0000</span>
+    </div>
+    </div>
+
+  </div>
+</div>
+<!-- back of the card -->
+  <div class="card-back">
+    <span class="cvc-number">000</span>
+  </div>
+</div>
+
+  <form class="info" id="form">
+  
+    <!-- username -->
+    <div class="userinfo">
+    <div class="align">
+    <label class="label" for="name">CARDHOLDER NAME</label>
+      <input type="text"oninput=namechange() name="name" id="name" placeholder="e.g. Jane Appleseed">
+      <div class="name-error"></div>
+    </div>
+
+    <!-- cardnumber -->
+    <div class="align">
+    <label class="label" for="cardnumber">CARD NUMBER</label>
+      <input  name="number" oninput="digitssep()" id="cardnumber"  placeholder="e.g. 1234 5678 9123 0000">
+      <div class="number-error"></div>
+    </div>
+    </div>
+    
+    <!-- cardinfo -->
+    <div class="cardinfo">
+      <div class="expirydate">
+        <label class="label" for="month" >EXP. DATE (MM/YY)</label>
+       <div class="inputs">
+        <input oninput="monthchange()" name="month" id="month" placeholder="MM">
+        <div class="month-error"></div>
+        <input oninput="yearchange()" name="year" id="year" placeholder="YY" >
+        <div class="year-error"></div>
+       </div>
+        </div>
+      
+      <div class="cvc">
+        <label class="label" for="cvc">CVC</label>
+          <input  oninput = cvcchange() name="cvc" id="cvc" placeholder="e.g. 123">
+          <div class="cvc-error"></div>
+      </div>
+    </div>
+    <button type="submit"  class="btn"> Confirm </button>
+  
+</form>
+
+
+  
+  </div>
+
+<script src="index.js"></script>
+</body>
+</html>
